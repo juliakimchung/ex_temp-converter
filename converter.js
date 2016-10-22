@@ -15,9 +15,9 @@ var clear = document.getElementById("clear")
 // happen based on which radio button is selected.
 function determineConverter (inputFromCheckConverter) {
 
-var f = document.getElementById("f");
-var c =document.getElementById("c");
-if (f.checked) {
+	//var f = document.getElementById("f");
+	//var c =document.getElementById("c");
+ if (f.checked) {
 
 	toFahrenheit(inputFromCheckConverter);
 
@@ -44,7 +44,7 @@ function checkInput() {
   
 }
 
-  function toCelsius (inputFromDetermineConverter) {
+function toCelsius (inputFromDetermineConverter) {
 	var outputTemp = (inputFromDetermineConverter * 1.8) + 32;
 	/*console.log("celsius:", input);*/
 	outputToDom(outputTemp, "c");
@@ -72,7 +72,7 @@ function outputToDom(outputTemp, type) {
 
 	//console.log("colorText", outputTemp.toFixed(1), type);
 
-		if (type ==="c") {
+	if (type ==="c") {
 			if (outputTemp > 32) {
 				output.innerHTML = "<p class ='red'>" + outputTemp + "</p>";
 
@@ -110,6 +110,7 @@ function resetForm() {
 	input.value = " ";
 	output.innerHTML = " ";
 	f.checked = false;
+	c.checked = false;
 
 }
 // Assign a function to be executed when the button is clicked
